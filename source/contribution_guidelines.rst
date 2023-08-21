@@ -1,0 +1,3 @@
+REDi strives to operate as a community-driven opensource initiative, embracing contributions from all individuals interested in enriching the project and becoming part of our community. Whether you're inclined to enhance PyREDi, introduce valuable new features, or you've identified a bug, we invite you to submit a pull request. Your involvement is greatly appreciated and fosters the collaborative spirit of REDi.
+
+All contributions through REDi are handled via pull requests on GitHub. Once a pull request is submitted, it must be approved by a member of REDi's contributors team to ensure that the code matches the design and style of the rest of REDi code and that the core functionality is working. 
