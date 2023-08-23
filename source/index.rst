@@ -15,18 +15,7 @@ Install through PyPi
 
    ``pip install pyredi`` or ``python -m pip install pyredi``
 
-2. Import the PyREDi module into your Python script and run ``go_redi`` with the required inputs
-
-   .. code-block:: python
-   
-   	from PyREDi import go_redi
-   	import json
-   	
-   	building_dict=json.loads('examples/example_building.json')
-   	
-   	res = go_redi(building_dict=building_dict)
-   	
-   	print(res)
+You should now be able to use REDi in your Python code, as shown below in the Usage section.
 
 Install and run from source
 ***************************
@@ -43,59 +32,57 @@ Install and run from source
 
    ``pip install -r requirements.txt``
 
-4. Run the example building execute the following in command line:
-
-   ``python main.py -a "examples/example_building.json" -r "REDi_output.json" -s 2023``
-
-   You should see the following output:
-   
-   .. code-block:: text
-   
-   		******* Running REDi™ for building example_building *******
-   		
-   		Analysis done!
-   		
-   		Time to full recovery [days] 496.56187582116473
-   		Time to functional recovery [days]  475.5133725965221
-   		Time to immediate occupancy [days]  231.80657475175408
-   		
-   		Total downtime : [496.56187582 475.5133726  231.80657475] 
-
-   Note that if you omit the seed value (``-s 2023``) from the input parameters, your results will be different.
-
-.. important::
-
-   Tested on Python version **3.11**. It may or may not work in other versions of Python.
-
+You should now be able to use REDi in your Python environment, as shown below in the Usage section.
 
 Usage
 =====
 
-The REDi engine can be run via the PyREDi Python package or through a command line interface.
+The REDi engine can be run via the PyREDi Python package or through a command line interface. Both methods require installation as outlined above.
 
 PyREDi Python Package
 *********************
 
-To run the REDi engine from the PyREDi package, you first need to install the package from pip:
-
-``pip install pyredi`` or ``python -m pip install pyredi``
-
-Next, you need to import the PyREDi package into your Python script and run the ``go_redi`` function with the ``building_dict`` as input, as shown below:
+To run the REDi engine from the PyREDi package, you need to import the PyREDi package into your Python script and run the ``go_redi`` function with the ``building_dict`` as input, as shown below:
 
 .. code-block:: python
    
-   from PyREDi import go_redi
+   import json 
    
-   building_dict={...}
+   from REDi.go_redi import go_redi
    
-   res = go_redi(building_dict=building_dict)
+   building_dict = json.load(open('./examples/example_building.json'))
+   
+   res = go_redi(building_dict=building_dict, seed=2023)
+   
+   print('Total downtime :',res['building_total_downtime'],'\n')
 
-The ``building_dict`` object is a dictionary that should contain all inputs required by REDi. The inputs are explained below in the :ref:`inputs-label` section. An example ``building_dict`` is also provided in the ``examples/example_building.json`` file. 
+You should see the following output:
+
+.. code-block:: text
+
+		******* Running REDi™ for building example_building *******
+		
+		Analysis done!
+		
+		Time to full recovery [days] 496.56187582116473
+		Time to functional recovery [days]  475.5133725965221
+		Time to immediate occupancy [days]  231.80657475175408
+		
+		Total downtime : [496.56187582 475.5133726  231.80657475] 
+
+Note that if you omit the seed value (``seed=2023``) from the input parameters to ``go_redi``, your results will be different.
+
+The ``building_dict`` object is a dictionary that should contain all inputs required by REDi. The inputs are explained below in the :ref:`inputs-label` section. An example ``building_dict`` is also provided in the ``examples/example_building.json`` file. If importing the ``examples/example_building.json`` file as shown above, you must provide the absolute path to the ``examples/example_building.json`` file. The ``res`` object from the code-block above is a dictionary containing the outputs described below.
+
+.. important::
+
+    If you do not provide the seed and/or burn-in options, the output will vary every run, i.e., the output will be non-deterministic.
+    REDi is tested on Python version **3.11**. It may or may not work in other versions of Python.
 
 Command line interface
 **********************
 
-You can run the REDi engine from the command line by following the syntax below. 
+The REDi engine can be executed from the command line using the following syntax:
 
 .. code-block:: text
 
@@ -111,6 +98,26 @@ where:
 	- c C - Path to the components JSON file [str] (optional - REDi will use built-in FEMA P-58 component library if blank)
 	- s S - Seed for the random number generator, for deterministic output [int] (optional - leave blank for stochastic output)
 	- b B - Burn-in number, i.e., how many times to generate and discard random numbers at random number generator initialization [int] (optional - mainly for testing purposes)
+
+To run the example building, execute the following in command line:
+
+``python main.py -a "examples/example_building.json" -r "REDi_output.json" -s 2023``
+
+You should see the following output:
+
+.. code-block:: text
+
+		******* Running REDi™ for building example_building *******
+		
+		Analysis done!
+		
+		Time to full recovery [days] 496.56187582116473
+		Time to functional recovery [days]  475.5133725965221
+		Time to immediate occupancy [days]  231.80657475175408
+		
+		Total downtime : [496.56187582 475.5133726  231.80657475] 
+
+Note that if you omit the seed value (``-s 2023``) from the input parameters, your results will be different.
 
 .. important::
 

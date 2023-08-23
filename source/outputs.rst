@@ -18,8 +18,6 @@ A summary of REDi outputs is as follows:
 - **max_delay** - the maximum delay in days of all impeding factors.
 - **repair_class** - a dictionary containing the repair class of each component. The key is the **NISTR** component tag and the value is the repair class. 
 - **repair_schedule** - a list of size 3 containing dictionaries of the repair schedules for the 3 repair goals, i.e., full recovery, functional recovery, and re-occupancy (explained in further detail below).
-- **repair_sequence** - a list of lists that provides the repair sequence. The highest-level list #TODO
-- **repair_sequence_by_floor** - a list of lists of lists that highlights the repair sequence by floor. The highest-level list has a length equal to the number of stories plus the roof (**nFloor** + 1). The second and third-level lists contain the repair sequences for that floor.
 
 Repair schedule
 ---------------
@@ -28,10 +26,5 @@ The **repair_schedule** output is a list of size 3 containing dictionaries of th
 
 Each dictionary contains the following information:
 
-- **allocation** - #TODO
-- **ends** - #TODO
-- **ready** - #TODO
-- **span_by_seq** - #TODO
-- **starts** - #TODO
 - **struct_repairs** - number of days to complete the structural repairs. 
 - **total_span** - total span of the repair schedule in days. Note that this value will be the same as the corresponding value in the **building_total_downtime** array. 
