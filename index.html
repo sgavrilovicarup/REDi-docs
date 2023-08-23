@@ -1,0 +1,767 @@
+
+<!DOCTYPE html>
+
+
+<html lang="en" >
+
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>Introduction &#8212; REDi v1.0 documentation</title>
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "light";
+  </script>
+  
+  <!-- Loaded before other Sphinx assets -->
+  <link href="_static/styles/theme.css?digest=e353d410970836974a52" rel="stylesheet" />
+<link href="_static/styles/bootstrap.css?digest=e353d410970836974a52" rel="stylesheet" />
+<link href="_static/styles/pydata-sphinx-theme.css?digest=e353d410970836974a52" rel="stylesheet" />
+
+  
+  <link href="_static/vendor/fontawesome/6.1.2/css/all.min.css?digest=e353d410970836974a52" rel="stylesheet" />
+  <link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.1.2/webfonts/fa-solid-900.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.1.2/webfonts/fa-brands-400.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.1.2/webfonts/fa-regular-400.woff2" />
+
+    <link rel="stylesheet" type="text/css" href="_static/pygments.css?v=a746c00c" />
+  
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="_static/scripts/bootstrap.js?digest=e353d410970836974a52" />
+<link rel="preload" as="script" href="_static/scripts/pydata-sphinx-theme.js?digest=e353d410970836974a52" />
+
+    <script src="_static/documentation_options.js?v=7ea46a72"></script>
+    <script src="_static/doctools.js?v=888ff710"></script>
+    <script src="_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'index';</script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="docsearch:language" content="en"/>
+  </head>
+  
+  
+  <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="">
+
+  
+  
+  <a class="skip-link" href="#main-content">Skip to main content</a>
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          name="__primary"
+          id="__primary"/>
+  <label class="overlay overlay-primary" for="__primary"></label>
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          name="__secondary"
+          id="__secondary"/>
+  <label class="overlay overlay-secondary" for="__secondary"></label>
+  
+  <div class="search-button__wrapper">
+    <div class="search-button__overlay"></div>
+    <div class="search-button__search-container">
+<form class="bd-search d-flex align-items-center"
+      action="search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         id="search-input"
+         placeholder="Search the docs ..."
+         aria-label="Search the docs ..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form></div>
+  </div>
+  
+    <nav class="bd-header navbar navbar-expand-lg bd-navbar">
+<div class="bd-header__inner bd-page-width">
+  <label class="sidebar-toggle primary-toggle" for="__primary">
+    <span class="fa-solid fa-bars"></span>
+  </label>
+  
+  <div class="navbar-header-items__start">
+    
+      <div class="navbar-item">
+  
+
+<a class="navbar-brand logo" href="#">
+  
+  
+  
+  
+    
+    
+      
+    
+    
+    <img src="_static/Arup_Red_RGB.png" class="logo__image only-light" alt="Logo image"/>
+    <script>document.write(`<img src="_static/Arup_Red_RGB.png" class="logo__image only-dark" alt="Logo image"/>`);</script>
+  
+  
+</a></div>
+    
+  </div>
+  
+  
+  <div class="col-lg-9 navbar-header-items">
+    
+    <div class="me-auto navbar-header-items__center">
+      
+        <div class="navbar-item"><nav class="navbar-nav">
+  <p class="sidebar-header-items__title"
+     role="heading"
+     aria-level="1"
+     aria-label="Site Navigation">
+    Site Navigation
+  </p>
+  <ul class="bd-navbar-elements navbar-nav">
+    
+  </ul>
+</nav></div>
+      
+        <div class="navbar-item"><!-- This will display the project name -->
+<font size="+3">REDi+PyREDi Seismic Functional Recovery Methodology</font></div>
+      
+    </div>
+    
+    
+    <div class="navbar-header-items__end">
+      
+        <div class="navbar-item navbar-persistent--container">
+          
+<script>
+document.write(`
+  <button class="btn btn-sm navbar-btn search-button search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass"></i>
+  </button>
+`);
+</script>
+        </div>
+      
+      
+        <div class="navbar-item"><ul class="navbar-icon-links navbar-nav"
+    aria-label="Icon Links">
+        <li class="nav-item">
+          
+          
+          
+          
+          
+          
+          
+          
+          <a href="https://github.com/arup-group/REDi" title="GitHub" class="nav-link" rel="noopener" target="_blank" data-bs-toggle="tooltip" data-bs-placement="bottom"><span><i class="fab fa-github-square"></i></span>
+            <label class="sr-only">GitHub</label></a>
+        </li>
+</ul></div>
+      
+    </div>
+    
+  </div>
+  
+  
+    <div class="navbar-persistent--mobile">
+<script>
+document.write(`
+  <button class="btn btn-sm navbar-btn search-button search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass"></i>
+  </button>
+`);
+</script>
+    </div>
+  
+
+  
+    <label class="sidebar-toggle secondary-toggle" for="__secondary">
+      <span class="fa-solid fa-outdent"></span>
+    </label>
+  
+</div>
+
+    </nav>
+  
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
+      
+      <div class="bd-sidebar-primary bd-sidebar hide-on-wide">
+        
+
+  
+  <div class="sidebar-header-items sidebar-primary__section">
+    
+    
+      <div class="sidebar-header-items__center">
+        
+          <div class="navbar-item"><nav class="navbar-nav">
+  <p class="sidebar-header-items__title"
+     role="heading"
+     aria-level="1"
+     aria-label="Site Navigation">
+    Site Navigation
+  </p>
+  <ul class="bd-navbar-elements navbar-nav">
+    
+  </ul>
+</nav></div>
+        
+          <div class="navbar-item"><!-- This will display the project name -->
+<font size="+3">REDi+PyREDi Seismic Functional Recovery Methodology</font></div>
+        
+      </div>
+    
+    
+    
+      <div class="sidebar-header-items__end">
+        
+          <div class="navbar-item"><ul class="navbar-icon-links navbar-nav"
+    aria-label="Icon Links">
+        <li class="nav-item">
+          
+          
+          
+          
+          
+          
+          
+          
+          <a href="https://github.com/arup-group/REDi" title="GitHub" class="nav-link" rel="noopener" target="_blank" data-bs-toggle="tooltip" data-bs-placement="bottom"><span><i class="fab fa-github-square"></i></span>
+            <label class="sr-only">GitHub</label></a>
+        </li>
+</ul></div>
+        
+      </div>
+    
+  </div>
+  
+  
+  <div class="sidebar-primary-items__end sidebar-primary__section">
+  </div>
+  
+  <div id="rtd-footer-container"></div>
+
+
+      </div>
+      
+      <main id="main-content" class="bd-main">
+        
+        
+          <div class="bd-content">
+            <div class="bd-article-container">
+              
+              <div class="bd-header-article"></div>
+              
+              
+              
+                
+<div id="searchbox"></div>
+                <article class="bd-article" role="main">
+                  
+  <section id="introduction">
+<h1>Introduction<a class="headerlink" href="#introduction" title="Link to this heading">#</a></h1>
+<p>Welcome to the REDi (<a class="reference external" href="https://www.redi.arup.com">Resilient Design for the Next Generation of Buildings</a>) seismic engine documentation developed at <a class="reference external" href="https://www.arup.com">ARUP</a>. This documentation provides an overview of the code and features within the <a class="reference external" href="https://github.com/arup-group/REDi">REDi GitHub</a> repository and PyREDi, the official Python package of REDi.</p>
+<p>REDi introduces a comprehensive resilience-based earthquake design framework for holistic “beyond-code” design, planning, and assessment. While the building code provides reassurance that loss of life will be minimal, REDi focuses on quantifying the indirect losses due to downtime, or the inability of people to return to their homes or their jobs after a disaster. This empowers researchers and practitioners to incorporate resilience-based earthquake design into their projects, achieving much higher performance of their buildings than if they were to follow basic building code guidelines.</p>
+<p>Specifically, REDi can be employed to quantify the resilience and performance of an earthquake-damaged building by estimating the realistic downtime that considers impeding factors such as inspection delays, financing delays, and long-lead times for repair material procurement. The results from REDi can be employed to assess how design changes impact post-disaster recovery in new construction, and to plan for the recovery of existing buildings to potential future disasters.</p>
+<p>Our goals of making REDi opensource are to foster a collaborative environment and to reduce the effort required for implementation of REDi into your workflow. Our hope is that researchers and practitioners will adopt, improve on, and contribute to the REDi codebase for the greater good of the recovery and resilience community.</p>
+</section>
+<section id="quickstart">
+<h1>Quickstart<a class="headerlink" href="#quickstart" title="Link to this heading">#</a></h1>
+<p>REDi can be run as a Python package (PyREDi) or as a script through the command line.</p>
+<section id="install-through-pypi">
+<h2>Install through PyPi<a class="headerlink" href="#install-through-pypi" title="Link to this heading">#</a></h2>
+<ol class="arabic">
+<li><p>Install PyRedi through PyPi</p>
+<p><code class="docutils literal notranslate"><span class="pre">pip</span> <span class="pre">install</span> <span class="pre">pyredi</span></code> or <code class="docutils literal notranslate"><span class="pre">python</span> <span class="pre">-m</span> <span class="pre">pip</span> <span class="pre">install</span> <span class="pre">pyredi</span></code></p>
+</li>
+</ol>
+<p>You should now be able to use REDi in your Python code, as shown below in the Usage section.</p>
+</section>
+<section id="install-and-run-from-source">
+<h2>Install and run from source<a class="headerlink" href="#install-and-run-from-source" title="Link to this heading">#</a></h2>
+<ol class="arabic">
+<li><p>Download the source code from the <a class="reference external" href="https://github.com/arup-group/REDi">REDi GitHub repository</a> by running the following in your command line interface:</p>
+<p><code class="docutils literal notranslate"><span class="pre">git</span> <span class="pre">clone</span> <span class="pre">https://github.com/arup-group/REDi.git</span></code></p>
+</li>
+<li><p>Navigate into the folder where REDi was cloned:</p>
+<p><code class="docutils literal notranslate"><span class="pre">cd</span> <span class="pre">REDi</span></code></p>
+</li>
+<li><p>Install the required Python packages:</p>
+<p><code class="docutils literal notranslate"><span class="pre">pip</span> <span class="pre">install</span> <span class="pre">-r</span> <span class="pre">requirements.txt</span></code></p>
+</li>
+</ol>
+<p>You should now be able to use REDi in your Python environment, as shown below in the Usage section.</p>
+</section>
+</section>
+<section id="usage">
+<h1>Usage<a class="headerlink" href="#usage" title="Link to this heading">#</a></h1>
+<p>The REDi engine can be run via the PyREDi Python package or through a command line interface. Both methods require installation as outlined above.</p>
+<section id="pyredi-python-package">
+<h2>PyREDi Python Package<a class="headerlink" href="#pyredi-python-package" title="Link to this heading">#</a></h2>
+<p>To run the REDi engine from the PyREDi package, you need to import the PyREDi package into your Python script and run the <code class="docutils literal notranslate"><span class="pre">go_redi</span></code> function with the <code class="docutils literal notranslate"><span class="pre">building_dict</span></code> as input, as shown below:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">json</span>
+
+<span class="kn">from</span> <span class="nn">REDi.go_redi</span> <span class="kn">import</span> <span class="n">go_redi</span>
+
+<span class="n">building_dict</span> <span class="o">=</span> <span class="n">json</span><span class="o">.</span><span class="n">load</span><span class="p">(</span><span class="nb">open</span><span class="p">(</span><span class="s1">&#39;./examples/example_building.json&#39;</span><span class="p">))</span>
+
+<span class="n">res</span> <span class="o">=</span> <span class="n">go_redi</span><span class="p">(</span><span class="n">building_dict</span><span class="o">=</span><span class="n">building_dict</span><span class="p">,</span> <span class="n">seed</span><span class="o">=</span><span class="mi">2023</span><span class="p">)</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Total downtime :&#39;</span><span class="p">,</span><span class="n">res</span><span class="p">[</span><span class="s1">&#39;building_total_downtime&#39;</span><span class="p">],</span><span class="s1">&#39;</span><span class="se">\n</span><span class="s1">&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>You should see the following output:</p>
+<div class="highlight-text notranslate"><div class="highlight"><pre><span></span>******* Running REDi™ for building example_building *******
+
+Analysis done!
+
+Time to full recovery [days] 496.56187582116473
+Time to functional recovery [days]  475.5133725965221
+Time to immediate occupancy [days]  231.80657475175408
+
+Total downtime : [496.56187582 475.5133726  231.80657475]
+</pre></div>
+</div>
+<p>Note that if you omit the seed value (<code class="docutils literal notranslate"><span class="pre">seed=2023</span></code>) from the input parameters to <code class="docutils literal notranslate"><span class="pre">go_redi</span></code>, your results will be different.</p>
+<p>The <code class="docutils literal notranslate"><span class="pre">building_dict</span></code> object is a dictionary that should contain all inputs required by REDi. The inputs are explained below in the <a class="reference internal" href="#inputs-label"><span class="std std-ref">Inputs</span></a> section. An example <code class="docutils literal notranslate"><span class="pre">building_dict</span></code> is also provided in the <code class="docutils literal notranslate"><span class="pre">examples/example_building.json</span></code> file. If importing the <code class="docutils literal notranslate"><span class="pre">examples/example_building.json</span></code> file as shown above, you must provide the absolute path to the <code class="docutils literal notranslate"><span class="pre">examples/example_building.json</span></code> file. The <code class="docutils literal notranslate"><span class="pre">res</span></code> object from the code-block above is a dictionary containing the outputs described below.</p>
+<div class="admonition important">
+<p class="admonition-title">Important</p>
+<p>If you do not provide the seed and/or burn-in options, the output will vary every run, i.e., the output will be non-deterministic.
+REDi is tested on Python version <strong>3.11</strong>. It may or may not work in other versions of Python.</p>
+</div>
+</section>
+<section id="command-line-interface">
+<h2>Command line interface<a class="headerlink" href="#command-line-interface" title="Link to this heading">#</a></h2>
+<p>The REDi engine can be executed from the command line using the following syntax:</p>
+<div class="highlight-text notranslate"><div class="highlight"><pre><span></span>python main.py [-h] [-a A] [-c C] [-r R] [-s S] [-b B]
+</pre></div>
+</div>
+<p>where:</p>
+<div class="highlight-text notranslate"><div class="highlight"><pre><span></span>- h, help - show the help message
+- a A - Path to the asset JSON file [str] (required)
+- r R - Path of the results file (include the .json suffix in path) [str] (required)
+- c C - Path to the components JSON file [str] (optional - REDi will use built-in FEMA P-58 component library if blank)
+- s S - Seed for the random number generator, for deterministic output [int] (optional - leave blank for stochastic output)
+- b B - Burn-in number, i.e., how many times to generate and discard random numbers at random number generator initialization [int] (optional - mainly for testing purposes)
+</pre></div>
+</div>
+<p>To run the example building, execute the following in command line:</p>
+<p><code class="docutils literal notranslate"><span class="pre">python</span> <span class="pre">main.py</span> <span class="pre">-a</span> <span class="pre">&quot;examples/example_building.json&quot;</span> <span class="pre">-r</span> <span class="pre">&quot;REDi_output.json&quot;</span> <span class="pre">-s</span> <span class="pre">2023</span></code></p>
+<p>You should see the following output:</p>
+<div class="highlight-text notranslate"><div class="highlight"><pre><span></span>******* Running REDi™ for building example_building *******
+
+Analysis done!
+
+Time to full recovery [days] 496.56187582116473
+Time to functional recovery [days]  475.5133725965221
+Time to immediate occupancy [days]  231.80657475175408
+
+Total downtime : [496.56187582 475.5133726  231.80657475]
+</pre></div>
+</div>
+<p>Note that if you omit the seed value (<code class="docutils literal notranslate"><span class="pre">-s</span> <span class="pre">2023</span></code>) from the input parameters, your results will be different.</p>
+<div class="admonition important">
+<p class="admonition-title">Important</p>
+<p>If you do not provide the seed and/or burn-in options, the output will vary every run, i.e., the output will be non-deterministic.
+REDi is tested on Python version <strong>3.11</strong>. It may or may not work in other versions of Python.</p>
+</div>
+</section>
+<section id="background">
+<h2>Background<a class="headerlink" href="#background" title="Link to this heading">#</a></h2>
+<p>REDi is underpinned by the performance-based engineering methodology introduced by FEMA. Namely, the component-based FEMA P-58 methodology: <a class="reference external" href="https://femap58.atcouncil.org/2-uncategorised/1-home">Development of Next Generation Performance-Based Seismic Design Procedures for New and Existing Buildings</a>. REDi uses a modified version of the component library from the FEMA P-58 PACT tool. A prepackaged component library is provided as a json file in the repository: <code class="docutils literal notranslate"><span class="pre">data\component_library.json</span></code>. REDi’s version of the FEMA P-58 component library employs the same naming convention as FEMA, e.g., <code class="docutils literal notranslate"><span class="pre">B1031.001</span></code>.  The main difference between the two libraries is that each component in REDi’s library contains additional <strong>seq</strong>, <strong>long_lead</strong>, and <strong>rds</strong> parameters that are desribed below.</p>
+<ul class="simple">
+<li><p><strong>seq</strong> - list that defines the repair sequence for that component. The length of the <strong>seq</strong> list is always 2.</p></li>
+<li><p><strong>long_lead</strong> - list that specifies the long-lead times for repair materials for the component. The length of the <strong>long_lead</strong> list is always 3.</p></li>
+<li><p><strong>rds</strong> - list that provides the repair class for each damage state. The length of the <strong>rds</strong> list should be the same as the number of damage states.</p></li>
+</ul>
+<p>There are 3 repair goals in REDi: 1) full recovery; 2) functional recovery; and 3) re-occupancy. Moreover, there are 8 repair sequences; 7 that are non-structural and 1 that is structural.</p>
+</section>
+<section id="inputs-and-outputs">
+<h2>Inputs and outputs<a class="headerlink" href="#inputs-and-outputs" title="Link to this heading">#</a></h2>
+<p>The following sections outline the necessary inputs for the REDi engine and its corresponding outputs.</p>
+<section id="inputs">
+<span id="inputs-label"></span><h3>Inputs<a class="headerlink" href="#inputs" title="Link to this heading">#</a></h3>
+<p>More information about the following inputs can be found in Section A4.3 “Downtime Assessment Methodology” in the <a class="reference external" href="https://www.redi.arup.com">REDi guidelines</a>. As a reference, an example building input file is provided in the examples folder of the repository: <code class="docutils literal notranslate"><span class="pre">REDi/examples/example_building.json</span></code>. Note that the building input file is required to be in the json format.</p>
+<p>A high-level summary of REDi inputs is:</p>
+<ul class="simple">
+<li><p><strong>_id</strong> - a unique name that can be employed to identify the building</p></li>
+<li><p><strong>nFloor</strong> - number of floors or stories in the building (excluding the roof), e.g., 4</p></li>
+<li><p><strong>replacement_cost</strong> - building replacement cost in millions of dollars, e.g, 5.25</p></li>
+<li><p><strong>replacement_time</strong> - building replacement time in days, e.g., 1240</p></li>
+<li><p><strong>risk_parameters</strong> - dictionary of various input parameters that define repair resources and scheduling (explained in further detail below)</p></li>
+<li><p><strong>components</strong> - list of building components that identify the component type and quantity (explained in further detail below)</p></li>
+<li><p><strong>floor_areas</strong> - list of the floor areas, including the roof, e.g., if <strong>nFloor</strong> = 5, the <strong>floor_areas</strong> list should have 6 items when the roof area is included. Each item in the list is the area for that floor in square feet.</p></li>
+<li><p><strong>component_damage</strong> - dictionary of components where each key is a component id and the corresponding value provides quantities of the damaged components (explained in further detail here)</p></li>
+<li><p><strong>total_consequences</strong> - dictionary of components where each key is a component id and the corresponding value provides quantities of the consequences, e.g., repair time and cost (explained in further detail below)</p></li>
+</ul>
+<section id="risk-parameters">
+<h4>Risk parameters<a class="headerlink" href="#risk-parameters" title="Link to this heading">#</a></h4>
+<p>This section highlights the various “risk parameters” that are employed as inputs into the REDi engine. Note that some of the risk parameters are defined as random variables while some are constants. Broadly speaking, the risk parameters are grouped into 3 types: 1) repair; 2) impeding_factors; and 3) business.</p>
+<ol class="arabic">
+<li><p>Repair risk parameters</p>
+<p>The “repair” risk parameters are related to the physical repair processes. Examples include the number of repair workers, the severity of the repair, and possible repair sequences.</p>
+<p>The required repair risk parameters include:</p>
+<ul class="simple">
+<li><p><strong>repair_class_fragility</strong> - dictionary containing the random variable distribution parameters for the repair class fragility function. “Repair Classes” describe how the extent and severity of damage to types of building components may hinder specific recovery states.</p></li>
+</ul>
+<figure class="align-center" id="id2">
+<a class="image-caption reference internal image-reference" href="_images/A4.3-Table3.png"><img alt="Table 3 in Section A4.3 from REDi Downtime Assessment Methodology" class="image-caption" src="_images/A4.3-Table3.png" style="width: 448.8px; height: 253.79999999999998px;" /></a>
+<figcaption>
+<p><span class="caption-text">Table 3 in Section A4.3 from REDi Downtime Assessment Methodology.</span><a class="headerlink" href="#id2" title="Link to this image">#</a></p>
+</figcaption>
+</figure>
+<ul class="simple">
+<li><p><strong>nwork_perfloor_divider</strong> - list containing the number of workers per floor, for each non-structural repair sequence. The <strong>nwork_perfloor_divider</strong> will always contain 7 items (the number of non-structural repair sequences).</p></li>
+<li><p><strong>nworkers_recommended_mean</strong> - list that describes the mean number of recommended workers, for each non-structural repair sequence. The <strong>nworkers_recommended_mean</strong> will always contain 7 items (the number of non-structural repair sequences).</p></li>
+<li><p><strong>nworkers_recommended_mean_struct</strong> - mean number of recommended workers for the structural repair sequence. Since there is only one structural repair sequences, the <strong>nworkers_recommended_mean_struct</strong> will be a single number.</p></li>
+<li><p><strong>max_workers_per_building</strong> - a dictionary containing parameters that define a function to calculate the mean and sigma of a probability distribution as follows in the function <code class="docutils literal notranslate"><span class="pre">get_max_workers</span></code> from the file <code class="docutils literal notranslate"><span class="pre">go_redi.py</span></code></p></li>
+</ul>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">get_max_workers</span><span class="p">(</span><span class="n">building</span> <span class="p">:</span> <span class="n">Building</span><span class="p">):</span>
+
+    <span class="n">totalArea</span> <span class="o">=</span> <span class="n">building</span><span class="o">.</span><span class="n">total_floor_area</span>
+
+    <span class="c1"># Extract relevant risk parameters</span>
+    <span class="n">max_workers_minimum</span> <span class="o">=</span> <span class="n">building</span><span class="o">.</span><span class="n">max_workers_minimum</span>
+    <span class="n">max_workers_slope</span> <span class="o">=</span> <span class="n">building</span><span class="o">.</span><span class="n">max_workers_slope</span>
+    <span class="n">max_workers_x_cutoff</span> <span class="o">=</span> <span class="n">building</span><span class="o">.</span><span class="n">max_workers_x_cutoff</span>
+    <span class="n">max_workers_sigma</span> <span class="o">=</span> <span class="n">building</span><span class="o">.</span><span class="n">max_workers_sigma</span>
+
+    <span class="c1"># Calculate mean</span>
+    <span class="n">mean</span> <span class="o">=</span> <span class="n">max_workers_minimum</span> <span class="o">+</span> <span class="nb">max</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="n">totalArea</span> <span class="o">-</span> <span class="n">max_workers_x_cutoff</span><span class="p">)</span> <span class="o">*</span> <span class="n">max_workers_slope</span>
+
+    <span class="c1"># Sample max workers</span>
+    <span class="k">return</span> <span class="n">sample_dist</span><span class="p">(</span><span class="s2">&quot;Normal&quot;</span><span class="p">,</span> <span class="n">mean</span><span class="p">,</span> <span class="n">max_workers_sigma</span><span class="p">)</span>
+</pre></div>
+</div>
+<ul class="simple">
+<li><p><strong>max_workers_per_struct_divider</strong> - number of workers per floor for the structural repair sequence.</p></li>
+<li><p><strong>workers_capacity</strong> - dictionary containing the random variable distribution parameters for the worker capacity. The worker capacity is a constraint on the number of workers that can work on the same type of component, floor, etc.</p></li>
+<li><p><strong>max_workers_by_sequence</strong> - list of a list that describes the maximum workers per repair goal, per repair sequence. The highest-level list of length 3 corresponds to the 3 repair goals: 1) full recovery; 2) functional recovery; and 3) re-occupancy. The second-level list corresponds to the 7 non-structural repair sequences. A repair sequence defines the order of repairs that are to be conducted. For example, partitions can be replaced only once pipes and HVAC ducts have been repaired. Some repairs can occur simultaneously. Component repairs at a particular floor level need to be ordered in a manner that reflects the sequence of repairs that are likely to be undertaken by the contractor. The suggested repair sequences at a particular floor are presented in Figure 8 below.</p></li>
+</ul>
+<figure class="align-center" id="id3">
+<a class="image-caption reference internal image-reference" href="_images/A4.3-Figure8.png"><img alt="Figure 8 in Section A4.3 from REDi Downtime Assessment Methodology" class="image-caption" src="_images/A4.3-Figure8.png" style="width: 582.0px; height: 366.0px;" /></a>
+<figcaption>
+<p><span class="caption-text">Figure 8 in Section A4.3 from REDi Downtime Assessment Methodology.</span><a class="headerlink" href="#id3" title="Link to this image">#</a></p>
+</figcaption>
+</figure>
+</li>
+<li><p>Impeding factors risk parameters</p>
+<p>The “impeding factors” risk parameters are related to potential delays in scheduling inspections, workers, and materials to site. Other impeding factors include the time that it takes to get financing for the repairs. Example values for the impeding factors can be found in A4.3 in the <a class="reference external" href="https://www.redi.arup.com">REDi guidelines</a>.</p>
+<p>The required impeding factors parameters include:</p>
+<ul class="simple">
+<li><p><strong>inspection_delay</strong> - dictionary containing the random variable distribution parameters for the inspection delay, i.e., the delay in days of getting a municipal building inspector to inspect the repair work</p></li>
+<li><p><strong>financing_delay</strong> - dictionary containing the random variable distribution parameters for the delay in financing of the repair. Note that there are different parameters for delays in issuing insurance funds (default) and for private loans in the case where the repair cost is more than the insurance limit.</p></li>
+<li><p><strong>longlead</strong> - dictionary containing the random variable distribution parameters for the long-lead times of acquiring repair materials. There are some building components which require long procurement lead times – they are not readily available even in normal circumstances. These components include elevators, mechanical equipment, and non-standard and custom made components including structural elements, facades, mission-critical contents, etc. The long-lead times should be quantified from information provided by manufacturers, maintenance professionals, contractors, and/or cost estimators.</p></li>
+<li><p><strong>permit_delay_seismic</strong> - dictionary containing the random variable distribution parameters for the repair permit delays. The repair permit delays account for the time it takes to procure the required building permits from the local municipality. Note that there are different permit delay parameters for the different repair classes.</p></li>
+<li><p><strong>contractor_mobilization_delay_seismic</strong> - dictionary containing the random variable distribution parameters for the contractor mobilization delay. The contractor mobilization delay is the time it takes for a repair contractor to start the repair, i.e., schedule workers and account for potential shortage of workers, bidding phase for contract procurement, etc. Note that there are different contractor mobilization delay parameters for the different repair classes.</p></li>
+<li><p><strong>engineer_mobilization_delay_seismic</strong> - dictionary containing the random variable distribution parameters for the engineer mobilization delay. The engineer mobilization delay is the time it takes for an engineer to arrive at the site and assess the damage. An engineer would need to be consulted if there is structural damage to the building and the repair of minor structural damage (Repair Class 1) would likely require an engineer to stamp and approve the proposed repair strategy. Note that there are different engineer mobilization delay parameters for the different repair classes. Contractors and engineers will likely be in scarce supply after a major earthquake and retaining them on an annual basis to perform post-earthquake repairs could save weeks of downtime.</p></li>
+</ul>
+</li>
+<li><p>Business risk parameters</p>
+<p>The “business” risk parameters include stake-holder specific information that can impact the repair. Examples include whether there are sufficient funds available for repair, the fraction of the total repair cost that is insured and at what deductible, and whether any private financing will be needed to cover the difference between the total repair cost and the insured amount. The required business parameters include:</p>
+<ul class="simple">
+<li><p><strong>finance_method</strong> - string that describes the financing method for funding the recovery and repair. The two options are <code class="docutils literal notranslate"><span class="pre">insurance</span></code> or <code class="docutils literal notranslate"><span class="pre">other</span></code>.</p></li>
+<li><p><strong>insur_limit_ratio</strong> - fraction of the building replacement cost that is insured, e.g., 0.5</p></li>
+<li><p><strong>loss_thresh_ratio</strong> - fraction of the building replacement cost after which total loss occurs, e.g., 0.7. Total loss means that the total repair cost exceeds the loss threshold and no repairs occur (<code class="docutils literal notranslate"><span class="pre">sum(repair_costs)&gt;replacement_cost*loss_thresh_ratio</span></code>). Instead, a complete redesign, reconstruction, and replacement of the entire building takes place.</p></li>
+<li><p><strong>available_fund_ratio</strong> - fraction of the building replacement cost that is available for funding building repairs, e.g., 0.5</p></li>
+<li><p><strong>deductible_ratio</strong> - fraction of the building replacement cost that is equal to the insurance deductible, e.g., 0.2</p></li>
+</ul>
+</li>
+</ol>
+</section>
+<section id="components">
+<h4>Components<a class="headerlink" href="#components" title="Link to this heading">#</a></h4>
+<p>The <strong>components</strong> object is a list of lists. The highest-level, outer list contains <strong>nFloor</strong> + 1 lists, where each sub-list contains all components on a particular floor (including any components on the roof). Note that index 0 corresponds to the first story, index 1 to the second story, and so on until the last index which corresponds to the roof.</p>
+<p>Each component in the sub-list for each floor is a dictionary containing the component tag <strong>NISTR</strong> and an array of quantities <strong>Qty</strong> in each direction, i.e., <code class="docutils literal notranslate"><span class="pre">[dir_1,</span> <span class="pre">dir_2]</span></code>. The <strong>NISTR</strong> id corresponds to the FEMA P-58 component id in the supplied component dictionary.</p>
+<div class="highlight-text notranslate"><div class="highlight"><pre><span></span># the length of the &quot;components&quot; list is equal to nFloor + 1, or the number of stories plus the roof
+&quot;components&quot; :[floor_1, floor_2, ..., floor_n]
+
+where
+
+# the length of the &quot;floor_n&quot; list is equal to the number of different components on that floor
+floor_n = [
+             {&#39;NISTR&#39; : nistr_id_1, # NISTR id, e.g., B1033.061b
+             &#39;Qty&#39; : [dir_1, dir_2]}, # component quantity in each direction, e.g.,  [11.5, 11.5]
+             ...,
+             {&#39;NISTR&#39; : nistr_id_n,
+             &#39;Qty&#39; : [dir_1, dir_2]}
+          ]
+</pre></div>
+</div>
+</section>
+<section id="component-damage">
+<h4>Component damage<a class="headerlink" href="#component-damage" title="Link to this heading">#</a></h4>
+<p>The <strong>component_damage</strong> object is a dictionary where each key is a component tag <strong>NISTR</strong> and the values is a list of a list. The highest level, outer list is associated with the number of damage states while the inner list corresponds to the number of floors.</p>
+<div class="highlight-text notranslate"><div class="highlight"><pre><span></span># the length of the &quot;component_damage&quot; dictionary will be equal to the number of different types of damaged components in the building
+&quot;component_damage&quot;: {
+        # the length of the &quot;NISTR&quot; list below is equal to the number of damage states for that particular component
+        &quot;NISTR&quot;: [
+                ds_1,
+                ...,
+                ds_n
+        ],
+        ...,
+        }
+
+where
+
+        # the length of the &quot;ds_n&quot; list is equal to the number of floors, or **nFloor** + 1
+        ds_n = [
+           num_dmg_units_floor_1, # the quantity of damaged components of the type NISTR, in damage state ds_n, on floor_n
+           num_dmg_units_floor_2,
+           ...,
+           num_dmg_units_floor_n
+        ]
+</pre></div>
+</div>
+</section>
+<section id="total-consequences">
+<h4>Total consequences<a class="headerlink" href="#total-consequences" title="Link to this heading">#</a></h4>
+<p>The <strong>total_consequences</strong> object is a dictionary where each key is a component tag <strong>NISTR</strong> and the values are a list of lists of lists. The highest-level list (always length 4) corresponds to the 4 types of consequences at the component level: 1) repair cost [dollars]; 2) repair time [worker days]; 3) occupant injuries; and 4) occupant fatalities. The second-level list contains the number of floors, or <strong>nFloor</strong> + 1, so a list with length 5 will be a 4-story building with a roof. The third-level list is based on the number of damage states (not including Damage State 0, i.e., undamaged).</p>
+<div class="highlight-text notranslate"><div class="highlight"><pre><span></span># the length of the &quot;total_consequences&quot; dictionary will be equal to the number of the different types of damaged components in the building
+&quot;total_consequences&quot;: {
+        # the length of the &quot;NISTR&quot; list below is equal to the number of damage states for that particular component
+        &quot;NISTR&quot;: [
+                repair_cost_list,
+                repair_time_list,
+                injury_list,
+                fatalities_list
+        ],
+        ...,
+        }
+
+where
+
+        # the length of the &quot;repair_cost_list&quot; list is equal to the number of floors, or **nFloor** + 1
+        repair_cost_list = [
+           floor_1_list,
+           floor_1_list,
+           ...,
+           floor_n_list
+        ]
+
+        # the length of the &quot;floor_n_list&quot; is equal to the number of damage states in the component (not including damage state 0)
+        floor_n_list = [
+           ds_1_qty, # Quantity of the consequence &quot;repair cost&quot;, at floor_n, for ds_1
+           ds_2_qty,
+           ...,
+           ds_n_qty
+        ]
+</pre></div>
+</div>
+</section>
+</section>
+<section id="outputs">
+<span id="outputs-label"></span><h3>Outputs<a class="headerlink" href="#outputs" title="Link to this heading">#</a></h3>
+<p>The outputs of PyREDi are provided in .json format. Each key in the dictionary is an output.</p>
+<p>A summary of REDi outputs is as follows:</p>
+<ul>
+<li><p><strong>building_total_downtime</strong> - array of downtime quantities for each of the 3 repair goals. Namely, the time in days for full recovery, functional recovery, and re-occupancy:</p>
+<ul class="simple">
+<li><p>The first item in the array is full recovery, whcih includes restoring the building back to its pre-damage functionality and aesthetic condition. For example, repairing cracked partitions and facades</p></li>
+<li><p>The second item in the array is represents functional recovery, or the time required to establish re-occupancy and regain the facility’s primary function. Although non-functional aesthetic elements may still be damaged, the building should be operational according to its original intent, which involves reinstating power, water, fire sprinklers, lighting, elevators, and HVAC systems.</p></li>
+<li><p>The third item in the array is re-occupancy, or the time required to repair major structural damage so that the building is safe enough to be used for shelter.</p></li>
+</ul>
+<p>Note that re-occupancy can occur before functionality is restored. In this case lighting, heating/air-conditioning, and water may not be available.</p>
+</li>
+<li><p><strong>component_qty</strong> - a dictionary containing the sum of all components quantities where the key is the <strong>NISTR</strong> component tag and the corresponding values are the quantity of that component.</p></li>
+<li><p><strong>consequence_by_component_by_floor</strong> - a dictionary containing lists of the consequences arranged by floor. The key is the <strong>NISTR</strong> component tag and the values are a list of a list. The highest-level list corresponds to the number of consequences, while the inner list corresponds to each floor. The number of consquences is always 4 (1. repair cost [dollars]; 2. repair time [worker days]; 3. occupant injuries; and 4. occupant fatalities), while the number of floors is equal to the number of stories plus the roof (<strong>nFloor</strong> + 1)</p></li>
+<li><p><strong>damage_by_component_all_DS</strong> - a dictionary containing a list of the quantity of damaged components arranged by the damage state. The key is the <strong>NISTR</strong> component tag and the values are a list</p></li>
+<li><p><strong>impeding_delays</strong> - a dictionary containing the delay quantities from each impeding factor. Specifically, the engineering mobilization delay, financing delay, inspection delay, structural and non-structural contractor mobilization delays, and permit delay.</p></li>
+<li><p><strong>max_delay</strong> - the maximum delay in days of all impeding factors.</p></li>
+<li><p><strong>repair_class</strong> - a dictionary containing the repair class of each component. The key is the <strong>NISTR</strong> component tag and the value is the repair class.</p></li>
+<li><p><strong>repair_schedule</strong> - a list of size 3 containing dictionaries of the repair schedules for the 3 repair goals, i.e., full recovery, functional recovery, and re-occupancy (explained in further detail below).</p></li>
+</ul>
+<section id="repair-schedule">
+<h4>Repair schedule<a class="headerlink" href="#repair-schedule" title="Link to this heading">#</a></h4>
+<p>The <strong>repair_schedule</strong> output is a list of size 3 containing dictionaries of the repair schedules for the 3 downtime states, i.e., full recovery, functional recovery, and re-occupancy. The first dictionary in the list corresponds to full recovery, the second to functional recovery, and the third to re-occupancy.</p>
+<p>Each dictionary contains the following information:</p>
+<ul class="simple">
+<li><p><strong>struct_repairs</strong> - number of days to complete the structural repairs.</p></li>
+<li><p><strong>total_span</strong> - total span of the repair schedule in days. Note that this value will be the same as the corresponding value in the <strong>building_total_downtime</strong> array.</p></li>
+</ul>
+</section>
+</section>
+</section>
+</section>
+<section id="contribution-guidelines">
+<h1>Contribution guidelines<a class="headerlink" href="#contribution-guidelines" title="Link to this heading">#</a></h1>
+<p>REDi strives to operate as a community-driven opensource initiative, embracing contributions from all individuals interested in enriching the project and becoming part of our community. Whether you’re inclined to enhance PyREDi, introduce valuable new features, or you’ve identified a bug, we invite you to submit a pull request. Your involvement is greatly appreciated and fosters the collaborative spirit of REDi.</p>
+<p>All contributions through REDi are handled via pull requests on GitHub. Once a pull request is submitted, it must be approved by a member of REDi’s contributors team to ensure that the code matches the design and style of the rest of REDi code and that the core functionality is working.</p>
+</section>
+<section id="license">
+<h1>License<a class="headerlink" href="#license" title="Link to this heading">#</a></h1>
+<p>REDi is licensed under the Apache License, Version 2.0. The full license text can be found in the <code class="docutils literal notranslate"><span class="pre">LICENSE.txt</span></code> file found <a class="reference external" href="https://github.com/arup-group/REDi/blob/main/LICENSE.txt">here</a> in the GitHub repository.</p>
+</section>
+<section id="contact">
+<h1>Contact<a class="headerlink" href="#contact" title="Link to this heading">#</a></h1>
+<p>REDi represents the collaborative result of more than a decade of implementation and research into building recovery at Arup’s Risk + Resilience team (formerly Advanced Technology + Research) in San Francisco.</p>
+<section id="pyredi-code-contribution-team">
+<h2>PyREDi Code Contribution team<a class="headerlink" href="#pyredi-code-contribution-team" title="Link to this heading">#</a></h2>
+<ul class="simple">
+<li><p>Stevan Gavrilovic</p></li>
+<li><p>Kenny Buyco</p></li>
+<li><p>Nicole Paul</p></li>
+<li><p>Ben Shao</p></li>
+<li><p>Casie Venable</p></li>
+<li><p>Ji Su Lee</p></li>
+</ul>
+</section>
+<section id="redi-technical-background-team">
+<h2>REDi Technical background team<a class="headerlink" href="#redi-technical-background-team" title="Link to this heading">#</a></h2>
+<ul class="simple">
+<li><p>Ibbi Almufti</p></li>
+<li><p>Sean Merrifield</p></li>
+<li><p>Mike Mieler</p></li>
+<li><p>Tamika Bassman</p></li>
+<li><p>Meg Ackerson</p></li>
+<li><p>Jimmy Zhang</p></li>
+<li><p>Jinal Mehta</p></li>
+</ul>
+</section>
+<section id="contact-us">
+<h2>Contact Us<a class="headerlink" href="#contact-us" title="Link to this heading">#</a></h2>
+<p>This documentation is a continuous work in progress. To report any errors or omissions, please contact Dr. Stevan Gavrilovic, Arup, Risk + Resilience Team, San Francisco.</p>
+<p><a class="reference external" href="mailto:stevan&#46;gavrilovic&#37;&#52;&#48;arup&#46;com">Stevan Gavrilovic</a></p>
+<div class="toctree-wrapper compound">
+</div>
+</section>
+</section>
+
+
+                </article>
+              
+              
+              
+                <footer class="bd-footer-article">
+                  
+<div class="footer-article-items footer-article__inner">
+  
+    <div class="footer-article-item"><!-- Previous / next buttons -->
+<div class="prev-next-area">
+</div></div>
+  
+</div>
+
+                </footer>
+              
+            </div>
+            
+            
+              
+                <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+  <div class="sidebar-secondary-item">
+  <div class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> On this page
+  </div>
+  <nav class="bd-toc-nav page-toc">
+    <ul class="visible nav section-nav flex-column">
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#">Introduction</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#quickstart">Quickstart</a><ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#install-through-pypi">Install through PyPi</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#install-and-run-from-source">Install and run from source</a></li>
+</ul>
+</li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#usage">Usage</a><ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#pyredi-python-package">PyREDi Python Package</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#command-line-interface">Command line interface</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#background">Background</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#inputs-and-outputs">Inputs and outputs</a><ul class="visible nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#inputs">Inputs</a><ul class="visible nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#risk-parameters">Risk parameters</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#components">Components</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#component-damage">Component damage</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#total-consequences">Total consequences</a></li>
+</ul>
+</li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#outputs">Outputs</a><ul class="visible nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#repair-schedule">Repair schedule</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#contribution-guidelines">Contribution guidelines</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#license">License</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#contact">Contact</a><ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#pyredi-code-contribution-team">PyREDi Code Contribution team</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#redi-technical-background-team">REDi Technical background team</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#contact-us">Contact Us</a></li>
+</ul>
+</li>
+</ul>
+
+  </nav></div>
+
+  <div class="sidebar-secondary-item">
+  <div class="tocsection sourcelink">
+    <a href="_sources/index.rst.txt">
+      <i class="fa-solid fa-file-lines"></i> Show Source
+    </a>
+  </div>
+</div>
+
+</div></div>
+              
+            
+          </div>
+          <footer class="bd-footer-content">
+            
+          </footer>
+        
+      </main>
+    </div>
+  </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="_static/scripts/bootstrap.js?digest=e353d410970836974a52"></script>
+<script src="_static/scripts/pydata-sphinx-theme.js?digest=e353d410970836974a52"></script>
+
+  <footer class="bd-footer">
+<div class="bd-footer__inner bd-page-width">
+  
+    <div class="footer-items__start">
+      
+        <div class="footer-item">
+  <p class="copyright">
+    
+      © Copyright 2023, Arup.
+      <br/>
+    
+  </p>
+</div>
+      
+        <div class="footer-item">
+  <p class="sphinx-version">
+    Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 7.2.2.
+    <br/>
+  </p>
+</div>
+      
+    </div>
+  
+  
+    <div class="footer-items__end">
+      
+        <div class="footer-item"><p class="theme-version">
+  Built with the <a href="https://pydata-sphinx-theme.readthedocs.io/en/stable/index.html">PyData Sphinx Theme</a> 0.13.3.
+</p></div>
+      
+    </div>
+  
+</div>
+
+  </footer>
+  </body>
+</html>
